@@ -1,5 +1,5 @@
 /* Projektplanner PWA: statische App-Dateien offline bereitstellen. Persönliche Daten verbleiben im lokalen Browser-Speicher. */
-const CACHE_NAME='projektplanner-pwa-v1-4';
+const CACHE_NAME='projektplanner-pwa-v1-6';
 const APP_SHELL=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./icon-180.png'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting()));
